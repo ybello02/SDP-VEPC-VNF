@@ -1,0 +1,18 @@
+name: sdpController
+provider: JAS
+nfvo-version: 6.0.0
+vim_types:
+ - docker    
+image:
+    upload: "false"
+    names:
+        - "ubuntu:14.04"
+    link: "ubuntu:14.04"
+image-config:
+    name: "ubuntu:14.04"
+    diskFormat: QCOW2
+    containerFormat: BARE
+    minCPU: 0
+    minDisk: 0
+    minRam: 0
+    isPublic: false
