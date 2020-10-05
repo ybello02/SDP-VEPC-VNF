@@ -1,0 +1,19 @@
+
+name: Cassandra
+provider: YB
+nfvo-version: 6.0.0
+vim_types:
+ - docker    
+image:
+    upload: "false"
+    names:
+        - "ubuntu:18.04"
+    link: "ubuntu:18.04"
+image-config:
+    name: "ubuntu:18.04"
+    diskFormat: QCOW2
+    containerFormat: BARE
+    minCPU: 0
+    minDisk: 0
+    minRam: 0
+    isPublic: false
