@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-echo $sdpNetwork
-service mysql start
-sudo node ./SDPController/sdpController.js 
+nohup tshark -i eth0 -i lo:s10 -w /tmp/mme_check_run.pcap 2>&1 > /dev/null
