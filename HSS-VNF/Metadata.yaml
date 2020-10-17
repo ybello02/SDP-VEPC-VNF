@@ -7,10 +7,10 @@ vim_types:
 image:
     upload: "false"
     names:
-        - "ubuntu:18.04"
-    link: "ubuntu:18.04"
+        - "ubuntu:bionic"
+    link: "ubuntu:bionic"
 image-config:
-    name: "ubuntu:18.04"
+    name: "ubuntu:bionic"
     diskFormat: QCOW2
     containerFormat: BARE
     minCPU: 0
