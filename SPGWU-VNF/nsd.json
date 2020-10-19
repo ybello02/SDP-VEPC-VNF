@@ -1,5 +1,5 @@
 {
-  "name": "oai-hss",
+  "name": "oai-spgwu",
   "vendor": "YB",
   "version": "docker",
   "vld": [{
@@ -7,7 +7,7 @@
   }],
   "vnfd": [
     {
-      "name":"oai-hss",
+      "name":"oai-spgwu",
       "vendor":"YB",
       "version":"docker",
       "deployment_flavour":[
@@ -17,7 +17,7 @@
       ],
       "vdu":[
         {
-          "vm_image":["ybello02/oai-hss-latest:latest"],
+          "vm_image":["ybello02/oai-spgwu-tiny-latest:latest"],
           "scale_in_out":2,
           "vnfc":[
         {

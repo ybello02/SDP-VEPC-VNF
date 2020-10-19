@@ -2,4 +2,4 @@
 
 echo $sdpNetwork
 service mysql start
-sudo node ./SDPController/sdpController.js 
+node ./SDPController/sdpController.js 

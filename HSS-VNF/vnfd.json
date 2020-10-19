@@ -3,12 +3,6 @@
     "vendor":"YB",
     "version":"1.0.0",
     "lifecycle_event":[
-        {
-            "event":"INSTANTIATE",
-            "lifecycle_events":[
-                "setup.sh"
-            ]
-        },
        	{
             "event":"START",
             "lifecycle_events":[
