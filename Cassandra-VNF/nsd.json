@@ -23,7 +23,7 @@
         {
           "connection_point":[
             {
-              "virtual_link_reference":"prod-oai-public-net"
+              "virtual_link_reference":"prod-oai-hss-cassandra-net"
             }
           ]
         }
@@ -32,7 +32,7 @@
       ],
       "virtual_link":[
         {
-           "name":"prod-oai-public-net"
+           "name":"prod-oai-hss-cassandra-net"
         }
       ],
       "type":"server",

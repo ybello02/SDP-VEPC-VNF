@@ -1,0 +1,79 @@
+{
+  "name": "oai-hss-cassandra",
+  "vendor": "JAS",
+  "version": "docker",
+  "vld": [{
+    "name": "sdpNetwork"
+  }],
+  "vnfd": [
+    {
+      "name":"oai-hss",
+      "vendor":"FOKUS",
+      "version":"docker",
+      "deployment_flavour":[
+        {
+          "flavour_key":"m1.small"
+        }
+      ],
+      "vdu":[
+        {
+          "vm_image":["ybello02/oai-hss-latest:latest"],
+          "scale_in_out":3,
+          "vnfc":[
+        {
+          "connection_point":[
+            {
+              "virtual_link_reference":"sdpNetwork"
+            }
+          ]
+        }
+          ]
+        }
+      ],
+      "virtual_link":[
+        {
+           "name":"sdpNetwork"
+        }
+      ],
+      "type":"client",
+      "endpoint":"docker"
+    },
+    {
+      "name":"oai-cassandra",
+      "vendor":"JAS",
+      "version":"docker",
+      "vdu":[
+        {
+          "vm_image":["cassandra:2.1"],
+          "scale_in_out":3,
+          "vnfc":[
+        {
+          "connection_point":[
+            {
+              "virtual_link_reference":"sdpNetwork"
+            }
+          ]
+        }
+          ]
+        }
+      ],
+      "deployment_flavour":[
+        {
+          "flavour_key":"m1.small"
+        }
+      ],
+      "virtual_link":[
+        {
+           "name":"sdpNetwork"
+        }
+      ],
+      "requires": {
+        "oai-hss": {
+            "parameters":["hostname"]
+      	}
+      },
+      "type":"server",
+      "endpoint":"docker"
+    }
+  ]
+}
